@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css", :rel => "stylesheet"}/
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}
+    %link{:href => "style/style.css", :rel => "stylesheet"}/
+  %body
+    %form
+      %select{:name => "category"}
+        %option{:value => "length"} Length
+        %option{:value => "angle"} Angle
+        %option{:value => "area"} Weighting
+      
+      %select{:name => "from"}
+        %option{:value => "mm"} MM
+        %option{:value => "cm"} CM
+        %option{:value => "m"} M
+        %option{:value => "km"} KM
+      %select{:name => "to"}
+        %option{:value => "mm"} MM
+        %option{:value => "cm"} CM
+        %option{:value => "m"} M
+        %option{:value => "km"} KM
+      %br/
+      %br/
+      %input{:type => "submit"}
+        GO
+    %script{:src => "https://www.google.com/jsapi", :type => "text/javascript"}
+    :javascript
+      google.load("jquery", "1");
+      google.load("jqueryui", "1");
+    %script{:src => "js/app.js"}
