@@ -1,33 +1,21 @@
 !!!
 %html
   %head
-    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css", :rel => "stylesheet"}/
-    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}
-    %link{:href => "style/style.css", :rel => "stylesheet"}/
+    %script{src: 'js/jquery-1.11.2.min.js'}
+    %link{href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css', rel: 'stylesheet'}
+    %link{href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css', rel: 'stylesheet'}
+    %script{src: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'}
+    %link{href: 'style/style.css', rel: 'stylesheet'}
   %body
-    %form
-      %select{:name => "category"}
-        %option{:value => "length"} Length
-        %option{:value => "angle"} Angle
-        %option{:value => "area"} Weighting
-      
-      %select{:name => "from"}
-        %option{:value => "mm"} MM
-        %option{:value => "cm"} CM
-        %option{:value => "m"} M
-        %option{:value => "km"} KM
-      %select{:name => "to"}
-        %option{:value => "mm"} MM
-        %option{:value => "cm"} CM
-        %option{:value => "m"} M
-        %option{:value => "km"} KM
-      %br/
-      %br/
-      %input{:type => "submit"}
+    %ul.nav.nav-pills.category_menu
+    .form-inline
+      .form-group-vertical   
+        %input.form-control{type: 'text', name: 'how_many_from' }
+        %select.form-control{name: 'from'}
+      .form-group-vertical
+        %input.form-control{type: 'text', name: 'how_many_to' }
+        %select.form-control{name: 'to'}
+      %button.btn.btn-default.go
         GO
-    %script{:src => "https://www.google.com/jsapi", :type => "text/javascript"}
-    :javascript
-      google.load("jquery", "1");
-      google.load("jqueryui", "1");
-    %script{:src => "js/app.js"}
+    %script{src: 'js/unit_converter.js'}
+    %script{src: 'js/app.js'}
